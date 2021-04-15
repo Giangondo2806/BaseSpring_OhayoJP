@@ -11,13 +11,21 @@ import com.ohayojp.base.generic.GenericRepository;
 import com.ohayojp.base.generic.GenericService;
 
 
-public abstract class BaseService<T extends BaseEntity, PK extends Serializable, D extends GenericRepository<T, PK>>
+/**
+ * 
+ * @author GiangTB
+ *
+ * @param <T>
+ * @param <PK>
+ * @param <D>
+ */
+public abstract class BaseService<T extends BaseEntity, PK extends Serializable, RP extends GenericRepository<T, PK>>
     implements GenericService<T, PK> {
   protected final Log log = LogFactory.getLog(getClass().getName());
 
-  protected D genericRepository;
+  protected RP genericRepository;
 
-  public void setgenericRepository(D genericRepository) {
+  public void setgenericRepository(RP genericRepository) {
     this.genericRepository = genericRepository;
   }
 

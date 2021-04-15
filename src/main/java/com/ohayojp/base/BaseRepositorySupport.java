@@ -13,6 +13,13 @@ import org.hibernate.SessionFactory;
 
 import com.ohayojp.base.generic.GenericRepository;
 
+/**
+ * 
+ * @author GiangTB
+ *
+ * @param <T> Entity
+ * @param <PK> PrimaryKey
+ */
 public class BaseRepositorySupport<T extends BaseEntity, PK extends Serializable> implements GenericRepository<T, PK> {
   private Class<T> persistenClass;
   

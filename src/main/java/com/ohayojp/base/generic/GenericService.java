@@ -1,6 +1,10 @@
 package com.ohayojp.base.generic;
 import java.io.Serializable;
-
+/**
+ * 
+ * @author GiangTB
+ *
+ */
 public interface GenericService<T, PK extends Serializable> {
   public T save(T target) throws Exception;
   

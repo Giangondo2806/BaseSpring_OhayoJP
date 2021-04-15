@@ -9,6 +9,11 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+/**
+ * 
+ * @author GiangTB
+ *
+ */
 @MappedSuperclass
 public  class BaseEntity implements Serializable {
 	  @Id

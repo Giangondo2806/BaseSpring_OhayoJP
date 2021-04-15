@@ -1,5 +1,10 @@
 package com.ohayojp.base.generic;
 
-public interface GenericController  {
+/**
+ * 
+ * @author GiangTB
+ *
+ */
+public interface GenericController   {
 
 }

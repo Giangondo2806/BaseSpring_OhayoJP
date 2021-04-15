@@ -2,7 +2,11 @@ package com.ohayojp.base.generic;
 import java.io.Serializable;
 import java.util.List;
 import com.ohayojp.base.BaseEntity;
-
+/**
+ * 
+ * @author GiangTB
+ *
+ */
 public interface GenericRepository<T extends BaseEntity, PK extends Serializable> {
   public T save(T target) throws Exception;
   
