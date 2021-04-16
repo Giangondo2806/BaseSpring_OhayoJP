@@ -20,11 +20,11 @@ public  class BaseEntity implements Serializable {
 	  private long id;
 	  
 	  @Column(name = "createdAt",nullable = false)
-	  @Temporal(TemporalType.DATE)
+	  @Temporal(TemporalType.TIMESTAMP)
 	  private Date createdAt;
 	  
 	  @Column(name = "updatedAt",nullable = false)
-	  @Temporal(TemporalType.DATE)
+	  @Temporal(TemporalType.TIMESTAMP)
 	  private Date updatedAt;
 	  
 	  @Column(name = "deletedAt",nullable = true)

@@ -5,6 +5,7 @@ package com.ohayojp.product;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -39,4 +40,9 @@ public class Product extends BaseEntity {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	@Override
+	public String toString() {
+		return "Product [name=" + name + ", quantity=" + quantity + ", price=" + price + "]";
+	}
+
 }

@@ -1,11 +1,12 @@
-spring:
-  datasource:
-    username: giang
-    password: giang
-    url: jdbc:mysql://localhost:3306/ohayojp
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+#spring:
+#  datasource:
+#    username: giang
+#    password: giang
+#    url: jdbc:mysql://localhost:3306/ohayojp
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+#    
