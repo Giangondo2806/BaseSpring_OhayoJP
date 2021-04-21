@@ -3,11 +3,20 @@ package com.ohayojp.base;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.annotation.Generated;
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.CreatedDate;
+
+import lombok.Data;
 
 /**
  * 
@@ -15,19 +24,30 @@ import javax.persistence.TemporalType;
  *
  */
 @MappedSuperclass
+@Data
 public  class BaseEntity implements Serializable {
-	  @Id
-	  private long id;
+	 @Id
+	 
+	 @GeneratedValue(strategy=GenerationType.AUTO)
+	  protected long id;
 	  
-	  @Column(name = "createdAt",nullable = false)
+	  @Column(name = "createdAt",nullable = true)
+	  @CreationTimestamp
 	  @Temporal(TemporalType.TIMESTAMP)
-	  private Date createdAt;
+	  protected Date createdAt;
 	  
-	  @Column(name = "updatedAt",nullable = false)
+	  @Column(name = "updatedAt",nullable = true)
 	  @Temporal(TemporalType.TIMESTAMP)
-	  private Date updatedAt;
+	  @UpdateTimestamp 
+	  protected Date updatedAt;
 	  
 	  @Column(name = "deletedAt",nullable = true)
 	  @Temporal(TemporalType.DATE)
-	  private Date deletedAt;
+	  protected Date deletedAt;
+	  
+	  
+
+	  
+	  
+	  
 }

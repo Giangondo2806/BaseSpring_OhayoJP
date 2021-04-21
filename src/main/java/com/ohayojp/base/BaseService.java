@@ -3,15 +3,17 @@ package com.ohayojp.base;
 import java.io.Serializable;
 import java.util.List;
 
+import com.ohayojp.base.generic.GenericRepository;
 import com.ohayojp.base.generic.GenericService;
 import com.ohayojp.product.ProductRepository;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-public abstract class BaseService<T extends BaseEntity, PK extends Serializable, D extends BaseRepository<T, PK>>
+public abstract class BaseService<T extends BaseEntity, PK extends Serializable, D extends GenericRepository<T, PK>> 
 implements GenericService<T, PK> {
 	
 	
@@ -33,22 +35,25 @@ return t;
 
 
 @Transactional
-public void removeById(PK id) throws Exception {
-repository.removeById(id);
+public void deleteById(PK id) throws Exception {
+this.repository.deleteById(id);
 }
 
 @Transactional
 public T update(T target) throws Exception {
-return repository.update(target);
+	return null;
+//reuturn this.repository.
 }
 
 @Transactional
 public T saveOrUpdate(T target) throws Exception {
-return repository.saveOrUpdate(target);
+	return null;
+//return repository.saveOrUpdate(target);
 }
 
 public T getById(PK id) throws Exception {
-return repository.getById(id);
+	return null;
+//return repository.getById(id);
 }
 
 public int count() throws Exception {
@@ -56,7 +61,13 @@ return (int) repository.count();
 }
 
 public List<T> findAll() throws Exception {
-return  repository.findAll();
+	return repository.findAll();
+
+}
+
+public List<T> customFildAll() throws Exception {
+	return repository.customFindAll();
+
 }
 
 

@@ -9,7 +9,7 @@ import java.util.List;
 public interface GenericService<T, PK extends Serializable> {
   public T save(T target) throws Exception;
   
-  public void removeById(PK id) throws Exception;
+  public void deleteById(PK id) throws Exception;
 
   public T update(T target) throws Exception;
 

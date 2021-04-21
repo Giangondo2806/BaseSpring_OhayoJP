@@ -26,23 +26,21 @@ public class Product extends BaseEntity {
     private String name;
     private int quantity;
     private double price;
-
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public double getPrice() {
-		return price;
-	}
-	public void setPrice(double price) {
-		this.price = price;
-	}
 	@Override
 	public String toString() {
-		return "Product [name=" + name + ", quantity=" + quantity + ", price=" + price + "]";
+		return "Product [name=" + name + ", quantity=" + quantity + ", price=" + price + ", id=" + id + ", createdAt="
+				+ createdAt + ", updatedAt=" + updatedAt + ", deletedAt=" + deletedAt + "]";
 	}
+    
+    
+
+
+	
+
+	
+	
+	
+
+	
 
 }
