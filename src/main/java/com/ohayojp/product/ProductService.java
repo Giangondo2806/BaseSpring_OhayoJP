@@ -17,7 +17,6 @@ import com.ohayojp.base.BaseService;
 @Transactional
 public class ProductService extends BaseService<Product, Long, ProductRepository> {
 	
-
 	@Autowired
 	private final ProductRepository productRepository;
 

@@ -65,8 +65,9 @@ public List<T> findAll() throws Exception {
 
 }
 
-public List<T> customFildAll() throws Exception {
-	return repository.customFindAll();
+
+public void softDelete(PK id) throws Exception {
+	 this.repository.softDelete(id);
 
 }
 

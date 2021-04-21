@@ -42,7 +42,7 @@ public  class BaseEntity implements Serializable {
 	  protected Date updatedAt;
 	  
 	  @Column(name = "deletedAt",nullable = true)
-	  @Temporal(TemporalType.DATE)
+	  @Temporal(TemporalType.TIMESTAMP)
 	  protected Date deletedAt;
 	  
 	  
