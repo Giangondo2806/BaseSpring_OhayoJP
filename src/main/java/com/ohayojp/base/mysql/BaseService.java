@@ -1,4 +1,4 @@
-package com.ohayojp.base;
+package com.ohayojp.base.mysql;
 
 import java.io.Serializable;
 import java.util.List;
@@ -13,6 +13,15 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+
+/**
+ * class recommend
+ * @2021/04/21
+ * @author GiangTB
+ * @param <T>
+ * @param <PK>
+ * @param <D>
+ */
 public abstract class BaseService<T extends BaseEntity, PK extends Serializable, D extends GenericRepository<T, PK>> 
 implements GenericService<T, PK> {
 	

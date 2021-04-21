@@ -11,11 +11,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.ohayojp.base.BaseEntity;
+import com.ohayojp.base.mysql.BaseEntity;
+
+
 /**
  * 
+ * created at 2021/04/21
  * @author GiangTB
- *
  */
 @Data
 @AllArgsConstructor

@@ -6,12 +6,14 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ohayojp.base.BaseService;
+import com.ohayojp.base.mysql.BaseService;
+
+
 
 /**
  * 
+ * created at 2021/04/21
  * @author GiangTB
- *
  */
 @Service("productService")
 @Transactional

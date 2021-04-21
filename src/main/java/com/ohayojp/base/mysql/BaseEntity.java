@@ -1,4 +1,4 @@
-package com.ohayojp.base;
+package com.ohayojp.base.mysql;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -18,36 +18,31 @@ import org.springframework.data.annotation.CreatedDate;
 
 import lombok.Data;
 
+
 /**
  * 
+ * created at 2021/04/21
  * @author GiangTB
- *
  */
 @MappedSuperclass
 @Data
-public  class BaseEntity implements Serializable {
-	 @Id
-	 
-	 @GeneratedValue(strategy=GenerationType.AUTO)
-	  protected long id;
-	  
-	  @Column(name = "createdAt",nullable = true)
-	  @CreationTimestamp
-	  @Temporal(TemporalType.TIMESTAMP)
-	  protected Date createdAt;
-	  
-	  @Column(name = "updatedAt",nullable = true)
-	  @Temporal(TemporalType.TIMESTAMP)
-	  @UpdateTimestamp 
-	  protected Date updatedAt;
-	  
-	  @Column(name = "deletedAt",nullable = true)
-	  @Temporal(TemporalType.TIMESTAMP)
-	  protected Date deletedAt;
-	  
-	  
+public class BaseEntity implements Serializable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	protected long id;
 
-	  
-	  
-	  
+	@Column(name = "createdAt", nullable = true)
+	@CreationTimestamp
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date createdAt;
+
+	@Column(name = "updatedAt", nullable = true)
+	@Temporal(TemporalType.TIMESTAMP)
+	@UpdateTimestamp
+	protected Date updatedAt;
+
+	@Column(name = "deletedAt", nullable = true)
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date deletedAt;
+
 }

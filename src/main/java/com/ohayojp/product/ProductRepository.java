@@ -14,13 +14,15 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-import com.ohayojp.base.BaseRepository;
 import com.ohayojp.base.generic.GenericRepository;
+import com.ohayojp.base.mysql.BaseRepository;
+
+
 
 /**
  * 
+ * created at 2021/04/21
  * @author GiangTB
- *
  */
 @Repository
 public  interface ProductRepository extends GenericRepository<Product, Long> {

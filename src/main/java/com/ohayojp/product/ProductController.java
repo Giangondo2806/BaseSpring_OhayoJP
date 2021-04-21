@@ -17,27 +17,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.SessionAttributes;
+
+import com.ohayojp.test.Domain;
+import com.ohayojp.test.DomainRepository;
+
 import org.springframework.http.HttpStatus;
+
+
 /**
  * 
+ * created at 2021/04/21
  * @author GiangTB
- *
  */
 @RestController  
 @RequestMapping("/product")
 public class ProductController {
 	@Autowired
     private ProductService productService;
+	@Autowired
+    private DomainRepository domainRepository;
 
 	
 	   @PostMapping(consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE,produces = {MediaType.APPLICATION_JSON_VALUE})
 	   @ResponseStatus(HttpStatus.OK)
-	    public Product addProduct(@ModelAttribute Product product) {
+	    public Domain addProduct(@ModelAttribute Domain product) {
 	        try {
-	        	System.out.println("product before save" + product.toString());
-	        	Product productRespon = productService.save(product);
-	        	System.out.println(productRespon.toString());
-	        	return productRespon;
+	        	return domainRepository.save(product);
 			} catch (Exception e) {
 				e.printStackTrace();
 				return null;
