@@ -1,10 +1,10 @@
-package com.ohayojp.base.mysql;
+package com.ohayojp.base.sql;
 
 import java.io.Serializable;
 import java.util.List;
 
-import com.ohayojp.base.generic.GenericRepository;
-import com.ohayojp.base.generic.GenericService;
+import com.ohayojp.base.sql.generic.GenericRepository;
+import com.ohayojp.base.sql.generic.GenericService;
 import com.ohayojp.product.ProductRepository;
 
 import org.apache.commons.logging.Log;

@@ -1,4 +1,4 @@
-package com.ohayojp.base.generic;
+package com.ohayojp.base.mongodb.generic;
 
 
 /**

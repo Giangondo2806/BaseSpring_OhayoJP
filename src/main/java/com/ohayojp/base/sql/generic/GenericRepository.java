@@ -1,4 +1,4 @@
-package com.ohayojp.base.generic;
+package com.ohayojp.base.sql.generic;
 import java.io.Serializable;
 import java.util.List;
 
@@ -11,7 +11,7 @@ import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ohayojp.base.mysql.BaseEntity;
+import com.ohayojp.base.sql.BaseEntity;
 
 
 

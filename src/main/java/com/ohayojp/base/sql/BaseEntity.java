@@ -1,4 +1,4 @@
-package com.ohayojp.base.mysql;
+package com.ohayojp.base.sql;
 
 import java.io.Serializable;
 import java.util.Date;

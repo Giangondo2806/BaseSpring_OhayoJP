@@ -1,4 +1,4 @@
-package com.ohayojp.base.generic;
+package com.ohayojp.base.sql.generic;
 import java.io.Serializable;
 import java.util.List;
 

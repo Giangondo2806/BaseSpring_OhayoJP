@@ -1,4 +1,4 @@
-package com.ohayojp.base.mysql;
+package com.ohayojp.base.sql;
 
 
 

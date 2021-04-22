@@ -11,7 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.ohayojp.base.mysql.BaseEntity;
+import com.ohayojp.base.sql.BaseEntity;
 
 
 /**
